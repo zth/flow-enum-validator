@@ -1,0 +1,38 @@
+{
+  "name": "flow-enum-validator",
+  "version": "1.0.0",
+  "author": "Gabriel Nordeborn",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "repository": "https://github.com/zth/flow-enum-validator",
+  "description": "Utility for validating Flow enum strings in runtime in a type safe way.",
+  "keywords": [
+    "flow",
+    "flowtype",
+    "typechecking",
+    "enum",
+    "enums",
+    "react",
+    "key input validation"
+  ],
+  "scripts": {
+    "prepublish": "yarn build",
+    "test": "flow check",
+    "build": "rm -rf lib && babel src --out-dir lib --ignore '**/__flowtest__/**' && flow-copy-source src lib --ignore '**/__flowtest__/**'"
+  },
+  "files": [
+    "package.json",
+    "README.md",
+    "LICENSE",
+    "lib",
+    "yarn.lock"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-rc.1",
+    "@babel/core": "^7.0.0-rc.1",
+    "@babel/preset-env": "^7.0.0-rc.1",
+    "@babel/preset-flow": "^7.0.0-rc.1",
+    "flow-bin": "^0.79.1",
+    "flow-copy-source": "^2.0.2"
+  }
+}
